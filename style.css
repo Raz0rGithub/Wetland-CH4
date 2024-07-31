@@ -355,13 +355,13 @@ td:nth-child(1) {
 }
 
 td:nth-child(2) {
-    width: 4vw;
+    width: 3vw;
     min-width: 34px
 }
 
 td:nth-child(3) {
-    width: 3vw;
-    min-width: 25px;
+    width: 2.5vw;
+        min-width: 20px;
 }
 
 td:nth-child(4) {
@@ -370,16 +370,16 @@ td:nth-child(4) {
 }
 
 td:nth-child(5) {
-    width: 4vw;
+    width: 4.5vw;
     min-width: 35px;
 }
 
 td:nth-child(6) {
-    width: 1.3vw;
+    width: 1.5vw;
 }
 
 td:nth-child(7) {
-    width: 1.3vw;
+    width: 1.5vw;
 }
 
 .flex {
