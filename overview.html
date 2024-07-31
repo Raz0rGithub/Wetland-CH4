@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US" style="background: #00313c">
+
+<head>
+    <title>LBNL | Methane Emissions Visualizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="layout-sidebar">
+    <header id="trueheader">
+    </header>
+
+    <main class=content>
+        <header>
+            <h1>Global Wetland CH4 Upscaling Dataset</h1>
+        </header>
+        <section id="intro">
+            <t> &emsp;&emsp; Methane is the second greenhouse gas following carbon dioxide, with global warming
+                potential 28-34 times
+                greater than CO2 over a 100-year horizon. Wetland is the largest natural source of methane but has the
+                largest uncertainties. Here, we generated a global wetland CH4 emission upscaling dataset from 2002 to
+                2023 (0.5-degree, weekly scale) using a causality guided machine learning model (constrained by the
+                time-lagged causal dependence between CH4 emissions and abiotic/biotic drivers) and the largest in-situ
+                observation datasets, including 44 eddy covariance sites and 92 chamber sites.<br />
+            </t>
+        </section>
+        <section>
+            <img src="./images/yearly.gif"
+                alt="A gif animation with 22 frames, each frame representing the mean flux across the globe for that year. "
+                id="sites" />
+        </section>
+        <section id="meta">
+            <h2>Metadata </h2>
+            <t> Spatial resolution: 0.5 degree <br />
+                Spatial extent: globe <br />
+                Temporal resolution: weekly <br />
+                Temporal extent: 2002-2023 <br />
+            </t>
+        </section>
+        <section id="emissions">
+            <h2>Global Ch4 Emissions</h2>
+            <img src="./images/emissions.png"
+                alt="An image of Global Ch4 Emissions over time. The x axis is the yearly time scale, and the y axis is the emissions per year."
+                id="sites" />
+        </section>
+        <section id="cite">
+            <h2>Citations: </h2>
+            <t> 1. Yuan, K., Li, F., McNicol, G., Chen, M., Hoyt, A., Knox, S., Riley, W.J., Jackson, R. and Zhu, Q.,
+                2024. Boreal–Arctic wetland methane emissions modulated by warming and vegetation activity. Nature
+                Climate Change, 14(3), pp.282-288.
+                <br />
+            </t>
+            <br />
+            <t>
+                2. Yuan, K., Zhu, Q., Li, F., Riley, W.J., Torn, M., Chu, H., McNicol, G., Chen, M., Knox, S., Delwiche,
+                K. and Wu, H., 2022. Causality guided machine learning model on wetland CH4 emissions across global
+                wetlands. Agricultural and Forest Meteorology, 324, p.109115.
+                <br />
+            </t>
+        </section>
+        <section id="use">
+            <h2>Fair Data Use Policy: </h2>
+            <t> &emsp;&emsp; We make this data product available to the research community as we believe that the
+                dissemination of
+                this data set will lead to advancement in science. If you plan to use our data product in a manuscript
+                or presentation, we request that you inform us at an early stage of your work. If this dataset is
+                essential to your work, or if an important result or finding depends on our wetland CH4 upscaling data,
+                co-authorship may be appropriate. You must inform us of your analysis and publication plans well in
+                advance of submission of a paper, give us an opportunity to read and intellectually contribute to the
+                manuscript, and, if appropriate, offer co-authorship.
+                <br />
+            </t>
+        </section>
+        <section id="contact">
+            <h2>Contacts: </h2>
+            <address>
+                Kunxiaojia Yuan (<a href="kunxiaojiayuan@lbl.gov">kunxiaojiayuan@lbl.gov</a>) and Qing Zhu (<a
+                    href="qzhu@lbl.gov">qzhu@lbl.gov</a>).
+            </address>
+        </section>
+        <section id="download">
+            <h2>Download CH4 upscaling data: </h2>
+            <t> Please read the fair data use policy above before you download the data. The CH4 global upscaling data
+                set is available at <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">xxxxxx</a>.
+            </t>
+        </section>
+    </main>
+
+    <aside class="sidebar">
+        <!-- <h1>Publications</h1> -->
+        <section id="recent">
+            <h2>Publications:</h2>
+            <h3></h3>
+            <a href="https://www.nature.com/articles/s41558-024-01933-3">Boreal–Arctic wetland methane emissions
+                modulated by warming and vegetation activity
+            </a>
+            <h3>...</h3>
+            <a href="https://www.nature.com/articles/s41558-024-01933-3">Boreal–Arctic wetland methane emissions
+                modulated by warming and vegetation activity
+            </a>
+            <h3>...</h3>
+            <a href="https://www.nature.com/articles/s41558-024-01933-3">Boreal–Arctic wetland methane emissions
+                modulated by warming and vegetation activity
+            </a>
+            <h3>...</h3>
+            <a href="https://www.nature.com/articles/s41558-024-01933-3">Boreal–Arctic wetland methane emissions
+                modulated by warming and vegetation activity
+            </a>
+        </section>
+        <section id="sampletext">
+            <t>
+                this is a collection of sample text to test the wrapping and margins of the sidebar.
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum."
+            </t>
+        </section>
+    </aside>
+
+    <footer id="truefooter">
+        <!-- <address>
+            Written by <a href="VictorChen@lbl.gov">Victor Chen</a>.<br>
+        </address> -->
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+
+</body>
+
+</html>

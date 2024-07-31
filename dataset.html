@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US" style="background: #00313c">
+
+<head>
+    <title>LBNL | Methane Emissions Visualizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="layout-basic">
+    <header id="trueheader">
+    </header>
+
+    <main class="content">
+        <header>
+            <h1>Flux Data</h1>
+        </header>
+        </section>
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Global')" id="defaultOpen">Global</button>
+            <button class="tablinks" onclick="openTab(event, 'NA')">North America</button>
+            <button class="tablinks" onclick="openTab(event, 'MA')">Middle America</button>
+            <button class="tablinks" onclick="openTab(event, 'SA')">South America</button>
+            <button class="tablinks" onclick="openTab(event, 'AF')">Africa</button>
+            <button class="tablinks" onclick="openTab(event, 'ES')">Euro-Siberian</button>
+            <button class="tablinks" onclick="openTab(event, 'OC')">Oceania</button>
+            <button class="tablinks" onclick="openTab(event, 'SSA')">South&Southeast Asia</button>
+            <button class="tablinks" onclick="openTab(event, 'AS')">Asia</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="Global" class="tabcontent">
+            <img src="./charts/yearly.svg" alt="A line plot showing the average Global Flux in CH4 from 2002 to 2023" />
+            <img src="./charts/annual_mean_global.svg"
+                alt="A map colored in the rainbow spectrum blue to red, visualizing the mean CH4 Flux globally" />
+        </div>
+        <div id="NA" class="tabcontent">
+            <img src="./charts/North America.svg"
+                alt="A line plot showing the average Flux of CH4 in North America from 2002 to 2023" />
+            <img src="./charts/annual_mean_north_america.svg"
+                alt="A map colored in the rainbow spectrum blue to red, visualizing the mean CH4 Flux in North America" />
+        </div>
+        <div id="MA" class="tabcontent">
+            <img src="./charts/Middle America.svg"
+                alt="A line plot showing the average Flux of CH4 in Middle America from 2002 to 2023" />
+            <img src="./charts/annual_mean_middle_america.svg"
+                alt="A map colored in the rainbow spectrum blue to red, visualizing the mean CH4 Flux in Middle America" />
+        </div>
+        <div id="SA" class="tabcontent">
+            <img src="./charts/South America.svg"
+                alt="A line plot showing the average Flux of CH4 in South America from 2002 to 2023" />
+            <img src="./charts/annual_mean_south_america.svg"
+                alt="A map colored in the rainbow spectrum blue to red, visualizing the mean CH4 Flux in South America" />
+        </div>
+        <div id="AF" class="tabcontent">
+            <img src="./charts/Africa.svg"
+                alt="A line plot showing the average Flux of CH4 in Africa from 2002 to 2023" />
+            <img src="./charts/annual_mean_africa.svg"
+                alt="A map colored in the rainbow spectrum blue to red, visualizing the mean CH4 Flux in Africa" />
+        </div>
+        <div id="ES" class="tabcontent">
+            <img src="./charts/Euro-Siberian.svg"
+                alt="A line plot showing the average Flux of CH4 in Euro-Siberian from 2002 to 2023" />
+            <img src="./charts/annual_mean_euro-siberian.svg"
+                alt="A map colored in the rainbow spectrum blue to red, visualizing the mean CH4 Flux in Euro-Siberian" />
+        </div>
+        <div id="OC" class="tabcontent">
+            <img src="./charts/Oceania.svg"
+                alt="A line plot showing the average Flux of CH4 in Oceania from 2002 to 2023" />
+            <img src="./charts/annual_mean_oceania.svg"
+                alt="A map colored in the rainbow spectrum blue to red, visualizing the mean CH4 Flux in Oceania" />
+        </div>
+        <div id="SSA" class="tabcontent">
+            <img src="./charts/South&Southeast Asia.svg"
+                alt="A line plot showing the average Flux of CH4 in South&Southeast Asia from 2002 to 2023" />
+            <img src="./charts/annual_mean_s_se_asia.svg"
+                alt="A map colored in the rainbow spectrum blue to red, visualizing the mean CH4 Flux in South&Southeast Asia" />
+        </div>
+        <div id="AS" class="tabcontent">
+            <img src="./charts/Asia.svg" alt="A line plot showing the average Flux of CH4 in Asia from 2002 to 2023" />
+            <img src="./charts/annual_mean_asia.svg"
+                alt="A map colored in the rainbow spectrum blue to red, visualizing the mean CH4 Flux in Asia" />
+        </div>
+
+    </main>
+
+    <footer id="truefooter">
+        <!-- <address>
+            Written by <a href="VictorChen@lbl.gov">Victor Chen</a>.<br>
+        </address> -->
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+
+</body>
+
+</html>
