@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US" style="background: #00313c">
+
+<head>
+    <title>LBNL | Methane Emissions Visualizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="layout-basic">
+    <header id="trueheader">
+    </header>
+
+    <main class=content>
+        <header>
+            <h1>Global Wetland CH4 Upscaling Dataset</h1>
+        </header>
+        <section id="intro">
+            <img src="./images/yearly.gif"
+                alt="A gif animation with 22 frames, each frame representing the mean flux across the globe for that year. "
+                id="sites" />
+        </section>
+        <section id="emissions">
+            <h2>Global Ch4 Emissions</h2>
+            <img src="./images/emissions.png"
+                alt="An image of Global Ch4 Emissions over time. The x axis is the yearly time scale, and the y axis is the emissions per year."
+                id="sites" />
+    </main>
+
+    <footer id="truefooter">
+        <!-- <address>
+            Written by <a href="VictorChen@lbl.gov">Victor Chen</a>.<br>
+        </address> -->
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script type="text/javascript" src="./script.js" defer></script>
+
+</body>
+
+</html>
