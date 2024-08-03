@@ -175,30 +175,6 @@ footer {
         "f f f"
 }
 
-/** if viewport width is too small, move the sidebar below main content */
-@media only screen and (max-width: 1110px) {
-    .layout-sidebar {
-        display: grid;
-        column-gap: 0rem;
-        row-gap: 0rem;
-        align-items: normal;
-        grid-template-columns: minmax(100px, 7fr) minmax(100px, 10fr) minmax(100px, 10fr);
-        grid-template-rows: min-content minmax(100px, 1fr) min-content;
-        grid-template-areas:
-            "h h h"
-            "c c c"
-            "s s s"
-            "f f f"
-    }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                img {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    width: 90vw;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                #emissions img {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    width: 90vw;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-}
-
 /** about.html dropdown menu **/
 details {
     border: 1px solid;
@@ -270,10 +246,7 @@ summary {
 
 .layout-basic img {
     display: block;
-    margin-left: none;
-    margin-right: none;
-    padding-left: none;
-    padding-right: none;
+    margin: none;
     border-width: 0px;
     width: 90vw;
     justify-items: center;
@@ -316,19 +289,13 @@ summary {
     border: 1px solid #ccc;
     border-top: none;
     padding: 10px;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    margin: 0 0 0 0;
 }
 
 .tabcontent img {
     display: block;
-    margin-left: none;
-    margin-right: none;
-    padding-left: 3vw;
-        padding-right: 2vw;
-        max-width: 85vw;
+    padding: 0 2vw 0 4vw;
+    max-width: 85vw;
 }
 
 /** sites.html **/
@@ -367,7 +334,7 @@ td:nth-child(2) {
 
 td:nth-child(3) {
     width: 2.5vw;
-        min-width: 20px;
+    min-width: 20px;
 }
 
 td:nth-child(4) {
@@ -405,4 +372,37 @@ td:nth-child(7) {
     align-items: center;
     justify-content: center;
     margin-bottom: 0;
+}
+
+/** if viewport width is too small, move the sidebar below main content */
+@media only screen and (max-width: 1110px) {
+    .layout-sidebar {
+        display: grid;
+        column-gap: 0rem;
+        row-gap: 0rem;
+        align-items: normal;
+        grid-template-columns: minmax(100px, 7fr) minmax(100px, 10fr) minmax(100px, 10fr);
+        grid-template-rows: min-content minmax(100px, 1fr) min-content;
+        grid-template-areas:
+            "h h h"
+            "c c c"
+            "s s s"
+            "f f f"
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tabcontent img {
+        display: block;
+        padding: 0 1vw 0 2vw;
+        max-width: 80vw;
+    }
+
+    img {
+        width: 90vw;
+    }
+
+    #emissions img {
+        width: 90vw;
+    }
 }
