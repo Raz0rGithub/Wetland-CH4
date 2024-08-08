@@ -292,7 +292,8 @@ summary {
     margin: 0 0 0 0;
 }
 
-.tabcontent img {
+.tabcontent img,
+.flux {
     display: block;
     padding: 0 2vw 0 4vw;
     max-width: 85vw;
