@@ -131,10 +131,18 @@ aside {
 #icons {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     row-gap: 2vh;
     column-gap: 2vw;
     justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 750px) {
+    #icons {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
 }
 
 footer {
@@ -180,9 +188,14 @@ details {
     border: 1px solid;
     padding: 0 1rem;
     background: white;
-    margin-right: 10px;
+    margin-right: 5px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+details .flex {
+    column-gap: 0;
+    justify-content: center;
 }
 
 details+details {
@@ -197,17 +210,20 @@ details:nth-child(10) {
 }
 
 details[open] {
-    padding-bottom: 2em;
+    padding-bottom: 1.5em;
 }
 
 .pfp {
-    max-height: 110px;
+    max-height: 136px;
     width: auto;
     border-radius: 50%;
     float: left;
     padding: 0.5rem;
     margin-right: 1rem;
-    margin-top: 1rem;
+}
+
+details p {
+    margin: 1rem 0 1rem 0;
 }
 
 .icon {
@@ -218,14 +234,14 @@ details[open] {
 
 @media only screen and (max-width: 1110px) {
     .icon {
-        height: calc(10vw + 32px);
+        height: calc(6vw + 52px);
         width: auto;
         border-radius: 0;
     }
 }
 
 summary {
-    padding: 1rem 2em 1rem 0;
+    padding: 1rem 0 1rem 0;
     font-size: 1.25rem;
     font-weight: bold;
     cursor: pointer;
