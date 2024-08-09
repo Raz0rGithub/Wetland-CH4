@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'></script>
+    <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' />
 </head>
 
 <body class="layout-basic">
@@ -26,11 +28,21 @@
                 alt="A gif animation with 22 frames, each frame representing the mean flux across the globe for that year. "
                 id="sites" />
         </section>
-        <section id="emissions">
-            <h2>Global Ch4 Emissions</h2>
-            <img src="./images/emissions.png"
-                alt="An image of Global Ch4 Emissions over time. The x axis is the yearly time scale, and the y axis is the emissions per year."
-                id="sites" />
+
+
+
+        <div id='map' style='width: 1600px; height: 900px;'></div>
+        <script>
+            var map = new maplibregl.Map({
+                container: 'map',
+                style: 'https://demotiles.maplibre.org/style.json', // stylesheet location
+                center: [0, 0], // starting position [lng, lat]
+                zoom: 2 // starting zoom
+            });
+        </script>
+
+
+
     </main>
 
     <footer id="truefooter">
