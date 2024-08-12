@@ -194,7 +194,7 @@ details {
 }
 
 details .flex {
-    column-gap: 0;
+    column-gap: 10vw;
     justify-content: center;
 }
 
