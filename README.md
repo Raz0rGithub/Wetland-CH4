@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="165" height="89">
   </a>
 
   <h3 align="center">Wetland CH4 Emissions Visualiszer</h3>
