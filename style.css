@@ -1,19 +1,5 @@
 /** Head **/
-
-/** Body **/
-body {
-    background: white;
-    background-size: 100%;
-    Background-attachment: fixed;
-    color: #39393A;
-    margin: 0px;
-    display: grid;
-    font-size: calc(14px + 0.4vw);
-    line-height: 1.4;
-    width: 100%;
-    min-height: 100vh;
-    font-family: "Open Sans", Arial, system-ui, sans-serif;
-}
+/** Head End **/
 
 /** Header **/
 #trueheader {
@@ -92,7 +78,21 @@ nav a.active {
 
 /** Nav Bar End**/
 
-/** Rest of Body **/
+/** Body **/
+body {
+    background: white;
+    background-size: 100%;
+    Background-attachment: fixed;
+    color: #39393A;
+    margin: 0px;
+    display: grid;
+    font-size: calc(14px + 0.4vw);
+    line-height: 1.4;
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Open Sans", Arial, system-ui, sans-serif;
+}
+
 h1 {
     text-align: center;
     font-size: calc(22px + 0.6vw);
@@ -126,23 +126,6 @@ aside {
     padding: 15px;
     padding-left: calc(15px + 2vw);
     padding-right: calc(15px + 2vw);
-}
-
-#icons {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    row-gap: 2vh;
-    column-gap: 2vw;
-    justify-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-@media only screen and (max-width: 750px) {
-    #icons {
-        grid-template-columns: repeat(3, minmax(100px, 1fr));
-    }
 }
 
 footer {
@@ -269,6 +252,23 @@ details[open] {
 
 details p {
     margin: 1rem 0 1rem 0;
+}
+
+#icons {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    row-gap: 2vh;
+    column-gap: 2vw;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 750px) {
+    #icons {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
 }
 
 .icon {
@@ -419,7 +419,7 @@ td:nth-child(7) {
 
 .flex {
     display: flex;
-    flex: 1;
+    flex: auto;
     column-gap: 2vw;
     flex-wrap: wrap;
     align-items: start;

@@ -1,16 +1,13 @@
 /** jquery **/
-/* header */
+/* header, footer, etc. (on document load) */
 $(document).ready(function () {
   $("#trueheader").load("./header.html");
   $("#truefooter").load("./footer.html");
-  $.getJSON("https://api.countapi.xyz/hit/ch4visualiser/home", function (response) { // View Counter - CountAPI
-    $("#visits").text(response.value);
+  $.getJSON("https://api.countapi.xyz/hit/rf.gd/ch4home", function (response) {
+    $("#home").text(response.value);
   });
 });
 
-/* footer */
-$(document).ready(function () {
-});
 /* Flux maps */
 $(document).ready(function () {
   const mediaQuery1 = window.matchMedia('(min-width: 1700px)');
