@@ -110,9 +110,9 @@
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Roadmap
+- [ ] Add Roadmap
 
-See the [open issues](https://github.com/Raz0rGithub/Wetland-CH4/issues) for a full list of proposed features (and known issues).
+Please see [open issues](https://github.com/Raz0rGithub/Wetland-CH4/issues) for a list of proposed features (and known issues).
 
 
 
