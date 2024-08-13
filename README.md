@@ -33,9 +33,17 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#packages">Built With</a></li>
+        <li><a href="#webhost">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#format">Format</a></li>
+      <ul>
+        <li><a href="#HTML Pages">HTML Pages</a></li>
+        <li><a href="#HTML Templates">HTML Templates</a></li>
+        <li><a href="#CSS">CSS</a></li>
+        <li><a href="#Javascript">Javascript</a></li>
+      </ul>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -68,6 +76,8 @@
 
 ### Webhost
 * InfinityFree
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -105,14 +115,16 @@
   * about.html functionality - profile card tabs 
   * flux.html functionality - regional data tabs
 * home.html, index.html - A javascript embed to implement globe functionality.
+  
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Roadmap
+- [ ] Add Roadmap
 
-See the [open issues](https://github.com/Raz0rGithub/Wetland-CH4/issues) for a full list of proposed features (and known issues).
+Please see [open issues](https://github.com/Raz0rGithub/Wetland-CH4/issues) for a list of proposed features (and known issues).
 
 
 
