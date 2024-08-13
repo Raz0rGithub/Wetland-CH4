@@ -51,7 +51,7 @@
 * HTML
 * CSS
 * JavaScript
-* [![JQuery][JQuery.com]][JQuery-url]
+* JQuery
 * Mapbox
 * Google MyMaps
 * Python (Jupyter Notebooks)
@@ -65,6 +65,47 @@
 * geojson-pick
 * geojson-precision
 * topojson-server
+
+### Webhost
+* InfinityFree
+
+
+
+<!-- ABOUT THE PROJECT -->
+## Format
+
+### HTML Pages
+* home.html, index.html - Website homepage. Default page for webhost is index.html, so index.html is a clone of home.html.
+* overview.html - A general overview of the dataset and project.
+* dataset.html - A page displaying many visualizations of the dataset across regions and timeframes.
+* sites.html - A page mapping and detailing each In-Situ site used in the dataset.
+* methodology.html - A template page intended for display of methodology.
+* about.html - A page displaying information about the working group, including each member.
+
+### HTML Templates
+* header.html - The website header. Is loaded in using jQuerry(script.js)
+* footer.html - The website footer. Is loaded in using jQuerry(script.js)
+
+### CSS
+* style.css - A stylesheet for all pages on the website.
+  * Head
+  * Header
+    * Icon
+    * Text
+    * Navigation
+  * Body (General Styling)
+  * Footer
+  * Latout
+  * Webpage Specific Content (in order of HTML Pages list above)
+
+### Javascript
+* script.js - A javascript script to be run on all pages of the website.
+  * jquery functions
+  * dataset.html functionality - flux map resize
+  * about.html functionality - profile card tabs 
+  * flux.html functionality - regional data tabs
+* home.html, index.html - A javascript embed to implement globe functionality.
+
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -86,9 +127,6 @@ Project Link: [https://github.com/Raz0rGithub/Wetland-CH4](https://github.com/Ra
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-Tammy Yuan, Qing Zhu, and Fa Li.
+Tammy Yuan, Qing Zhu, Fa Li.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
