@@ -28,15 +28,15 @@
   <h3 align="center">Wetland CH4 Emissions Visualiszer</h3>
 
   <p align="center">
-   Methane is the second greenhouse gas following carbon dioxide, with global warming potential 28-34 times greater than CO2 over a 100-year horizon. Wetland is the largest natural source of methane but has the largest uncertainties. Here, we generated a global wetland CH4 emission upscaling dataset from 2002 to 2023 (0.5-degree, weekly scale) using a causality guided machine learning model (constrained by the time-lagged causal dependence between CH4 emissions and abiotic/biotic drivers) and the largest in-situ observation datasets, including 44 eddy covariance sites and 92 chamber sites.
+    A Methane Emissions visualizer built as a Dataset Visualization template.
     <br />
     <br />
     <br />
     <a href="http://ch4visualiser.rf.gd/home.html">View Webpage</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/Raz0rGithub/Wetland-CH4/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/Raz0rGithub/Wetland-CH4/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -52,17 +52,8 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -73,18 +64,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](http://ch4visualiser.rf.gd/)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+   Methane is the second greenhouse gas following carbon dioxide, with global warming potential 28-34 times greater than CO2 over a 100-year horizon. Wetland is the largest natural source of methane but has the largest uncertainties. Here, we generated a global wetland CH4 emission upscaling dataset from 2002 to 2023 (0.5-degree, weekly scale) using a causality guided machine learning model (constrained by the time-lagged causal dependence between CH4 emissions and abiotic/biotic drivers) and the largest in-situ observation datasets, including 44 eddy covariance sites and 92 chamber sites.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
