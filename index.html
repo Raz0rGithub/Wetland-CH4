@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/mapbox-gl/dist/mapbox-gl.min.js'></script>
+    <link href='https://cdn.jsdelivr.net/npm/mapbox-gl/dist/mapbox-gl.css' rel='stylesheet' />
     <!-- <script src='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js'></script>
     <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet' /> -->
 </head>
@@ -21,42 +21,50 @@
     <header id="trueheader">
     </header>
 
-    <main class=content>
-        <header>
-            <h1>Global Wetland CH4 Upscaling Dataset</h1>
-        </header>
-        <!-- <section id="intro">
-            <img src="./images/yearly.gif"
-                alt="A gif animation with 22 frames, each frame representing the mean flux across the globe for that year. "
-                id="sites" />
-        </section> -->
+    <main class=content id="nopadding">
+        <header><!-- <h1>Global Wetland CH4 Upscaling Dataset</h1> --></header>
 
-        <iframe width='100%' height='900'
-            src="https://api.mapbox.com/styles/v1/victor-chen/clzqakx8u008s01ra76xc744p.html?title=false&access_token=pk.eyJ1IjoidmljdG9yLWNoZW4iLCJhIjoiY2x6bjRmZ2RkMGplZzJrcHhxaGdkejBiMCJ9.M16aiudcdcItWjvTfoFMhw&zoomwheel=false#2.85/44.16/58.54/16"
-            title="Untitled" style="border:none;"></iframe>
+        <div class="radio-inputs">
+            <label class="radio">
+                <input id="victor-chen/clzqakx8u008s01ra76xc744p" type="radio" name="rtoggle" value="mean"
+                    checked="checked">
+                <div class="name" for="victor-chen/clzqakx8u008s01ra76xc744p">mean</div>
+            </label>
+            <label class="radio">
+                <input id="victor-chen/clzrv1q5g00bg01r82uyjes92" type="radio" name="rtoggle" value="mean-zeroed">
+                <div class="name" for="victor-chen/clzrv1q5g00bg01r82uyjes92">mean-zeroed</div>
+            </label>
+            <label class="radio">
+                <input id="mapbox/outdoors-v12" type="radio" name="rtoggle" value="test">
+                <div class="name" for="mapbox/outdoors-v12">test</div>
+            </label>
+        </div>
 
-        <!-- <div id='map' style='width: 1600px; height: 900px;'></div> This is maxbox NOT iframe
+        <div id='map' style='width: 100%; height: 94vh;'></div>
+
         <script>
             mapboxgl.accessToken = 'pk.eyJ1IjoidmljdG9yLWNoZW4iLCJhIjoiY2x6bjRmZ2RkMGplZzJrcHhxaGdkejBiMCJ9.M16aiudcdcItWjvTfoFMhw';
-            var map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/victor-chen/clzqakx8u008s01ra76xc744p'
-
+            const map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/victor-chen/clzqakx8u008s01ra76xc744p', // style URL
+                center: [-90, 20], // starting position [lng, lat]
+                zoom: 2.5 // starting zoom
             });
+
             map.addControl(new mapboxgl.NavigationControl());
-        </script> -->
+            const inputs = document.getElementsByTagName('input');
 
+            for (const input of inputs) {
+                input.onclick = (layer) => {
+                    const layerId = layer.target.id;
+                    map.setStyle('mapbox://styles/' + layerId);
+                };
+            }
+        </script>
 
-
-        <!-- <div id='map' style='width: 1600px; height: 900px;'></div> This is MapLibre
-        <script>
-            var map = new maplibregl.Map({
-                container: 'map',
-                style: 'https://demotiles.maplibre.org/style.json', // stylesheet location
-                center: [0, 0], // starting position [lng, lat]
-                zoom: 2 // starting zoom
-            });
-        </script> -->
+        <div id="visits">
+            Counter(uninitialized)
+        </div>
 
     </main>
 
