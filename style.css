@@ -12,6 +12,7 @@
         gap: 2vw;
 
         #logo {
+            margin: 0;
             width: calc(32px + 8vw);
             min-height: 54px;
             min-width: 100px;
@@ -310,6 +311,8 @@ summary {
     margin: none;
     border-width: 0px;
     width: 90vw;
+    margin: auto;
+    padding: 2rem;
     justify-items: center;
     align-items: center;
     justify-content: center;
@@ -382,6 +385,7 @@ th {
 td {
     border: 1px solid #ccc;
     padding: calc(5px + 0.5vh) calc(5px + 0.25vw);
+    flex: auto;
 }
 
 td:nth-child(1) {
@@ -390,8 +394,8 @@ td:nth-child(1) {
 }
 
 td:nth-child(2) {
-    width: 3vw;
-    min-width: 34px
+    width: 3.5vw;
+    min-width: 36px
 }
 
 td:nth-child(3) {
