@@ -2,10 +2,14 @@
 /* header */
 $(document).ready(function () {
   $("#trueheader").load("./header.html");
+  $("#truefooter").load("./footer.html");
+  $.getJSON("https://api.countapi.xyz/hit/ch4visualiser/home", function (response) { // View Counter - CountAPI
+    $("#visits").text(response.value);
+  });
 });
+
 /* footer */
 $(document).ready(function () {
-  $("#truefooter").load("./footer.html");
 });
 /* Flux maps */
 $(document).ready(function () {
