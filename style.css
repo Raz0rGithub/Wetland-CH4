@@ -181,7 +181,7 @@ footer {
     box-sizing: border-box;
     box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
     padding: 0.25rem;
-    width: 400px;
+    width: 360px;
     font-size: 16px;
     margin: 1vh auto;
 }
@@ -223,8 +223,14 @@ details {
 }
 
 details .flex {
-    column-gap: 10vw;
+    column-gap: 15vw;
     justify-content: center;
+}
+
+@media only screen and (max-width: 1120px) {
+    details .flex {
+        column-gap: 5vw;
+    }
 }
 
 details+details {
@@ -394,7 +400,7 @@ td:nth-child(1) {
 }
 
 td:nth-child(2) {
-    width: 3.5vw;
+    width: 3.6vw;
     min-width: 36px
 }
 
@@ -442,10 +448,18 @@ td:nth-child(7) {
 
 /** if viewport width is too small, move the sidebar below main content */
 @media only screen and (max-width: 1110px) {
+    aside {
+        padding: 15px;
+        padding-left: calc(15px + 2vw);
+        padding-right: calc(15px + 2vw);
+        background-color: #50b3b5;
+    }
+
     .layout-sidebar {
         display: grid;
         column-gap: 0rem;
         row-gap: 0rem;
+
         align-items: normal;
         grid-template-columns: minmax(100px, 7fr) minmax(100px, 10fr) minmax(100px, 10fr);
         grid-template-rows: min-content minmax(100px, 1fr) min-content;
@@ -477,7 +491,7 @@ td:nth-child(7) {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 56.25%;
+    padding-top: 65vh;
     /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
