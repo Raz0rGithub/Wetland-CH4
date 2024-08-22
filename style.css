@@ -171,8 +171,16 @@ footer {
 #colorbar {
     position: absolute;
     z-index: 10;
-    width: 25%;
+    width: 25vw;
     padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #colorbar {
+        position: relative;
+        width: 90vw;
+        margin: auto;
+    }
 }
 
 #nopadding {
