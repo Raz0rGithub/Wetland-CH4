@@ -129,7 +129,7 @@ aside {
     padding-right: calc(15px + 2vw);
 }
 
-footer {
+#truefooter {
     padding: 10px;
     color: white;
     background-color: #00313c;
@@ -168,6 +168,14 @@ footer {
 }
 
 /** home.html */
+#title {
+    position: relative;
+    width: fit-content;
+    padding: 1rem 0 0 0;
+    margin: auto;
+    font-size: xx-large;
+}
+
 #colorbar {
     position: absolute;
     z-index: 10;

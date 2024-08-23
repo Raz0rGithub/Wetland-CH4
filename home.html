@@ -20,32 +20,21 @@
     </header>
 
     <main class=content id="nopadding">
-        <header><!-- <h1>Global Wetland CH4 Upscaling Dataset</h1> --></header>
-
-        <div class="radio-inputs">
-            <label class="radio">
-                <input id="victor-chen/clzrv1q5g00bg01r82uyjes92" type="radio" name="rtoggle" value="mean"
-                    checked="checked">
-                <div class="name">mean flux 2012-2023</div>
-            </label>
-            <label class="radio">
-                <input id="victor-chen/cm03o3e7q00dt01pw6bp2d6rv" type="radio" name="rtoggle" value="2012">
-                <div class="name">mean flux 2012</div>
-            </label>
-            <label class="radio">
-                <input id="victor-chen/cm03o1qyg00f201rbfvijceyb" type="radio" name="rtoggle" value="2023">
-                <div class="name">mean flux 2023</div>
-            </label>
-        </div>
-
+        <header>
+            <h2 id="title">Mean FCH4 (total and yearly)</h2>
+        </header>
         <!-- TIMELINE START -->
         <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
             <div class="cd-h-timeline__container container">
                 <div class="cd-h-timeline__dates">
                     <div class="cd-h-timeline__line">
                         <ol>
-                            <li><a href="#0" data-date="01/01/2012"
-                                    class="cd-h-timeline__date cd-h-timeline__date--selected" id="mapbox/standard">2012
+                            <li><a href="#0" data-date="01/01/2011"
+                                    class="cd-h-timeline__date cd-h-timeline__date--selected"
+                                    id="victor-chen/clzrv1q5g00bg01r82uyjes92">total
+                                </a></li>
+                            <li><a href="#0" data-date="01/01/2012" class="cd-h-timeline__date"
+                                    id="victor-chen/cm03o3e7q00dt01pw6bp2d6rv">2012
                                 </a></li>
                             <li><a href="#0" data-date="01/01/2013" class="cd-h-timeline__date">2013</a></li>
                             <li><a href="#0" data-date="01/01/2014" class="cd-h-timeline__date">2014</a></li>
@@ -56,7 +45,8 @@
                             <li><a href="#0" data-date="01/01/2019" class="cd-h-timeline__date">2019</a></li>
                             <li><a href="#0" data-date="01/01/2020" class="cd-h-timeline__date">2020</a></li>
                             <li><a href="#0" data-date="01/01/2021" class="cd-h-timeline__date">2021</a></li>
-                            <li><a href="#0" data-date="01/01/2022" class="cd-h-timeline__date">2022</a></li>
+                            <li><a href="#0" data-date="01/01/2022" class="cd-h-timeline__date"
+                                    id="victor-chen/cm03o1qyg00f201rbfvijceyb">2022</a></li>
                         </ol>
 
                         <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
@@ -97,6 +87,8 @@
                     </li>
                     <li class="cd-h-timeline__event text-component">
                     </li>
+                    <li class="cd-h-timeline__event text-component">
+                    </li>
                 </ol>
             </div> <!-- .cd-h-timeline__events -->
         </section>
@@ -116,7 +108,8 @@
                 container: 'map', // container ID
                 style: 'mapbox://styles/victor-chen/clzrv1q5g00bg01r82uyjes92', // style URL
                 center: [-90, 20], // starting position [lng, lat]
-                zoom: 2 // starting zoom
+                zoom: 2, // starting zoom
+                logoPosition: "bottom-right"
             });
 
             map.addControl(new mapboxgl.NavigationControl());
