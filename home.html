@@ -34,19 +34,30 @@
                                     id="victor-chen/clzrv1q5g00bg01r82uyjes92">total
                                 </a></li>
                             <li><a href="#0" data-date="01/01/2012" class="cd-h-timeline__date"
-                                    id="victor-chen/cm03o3e7q00dt01pw6bp2d6rv">2012
+                                    id="victor-chen/cm07v6kot00nb01psgvxme3om">2012
                                 </a></li>
-                            <li><a href="#0" data-date="01/01/2013" class="cd-h-timeline__date">2013</a></li>
-                            <li><a href="#0" data-date="01/01/2014" class="cd-h-timeline__date">2014</a></li>
-                            <li><a href="#0" data-date="01/01/2015" class="cd-h-timeline__date">2015</a></li>
-                            <li><a href="#0" data-date="01/01/2016" class="cd-h-timeline__date">2016</a></li>
-                            <li><a href="#0" data-date="01/01/2017" class="cd-h-timeline__date">2017</a></li>
-                            <li><a href="#0" data-date="01/01/2018" class="cd-h-timeline__date">2018</a></li>
-                            <li><a href="#0" data-date="01/01/2019" class="cd-h-timeline__date">2019</a></li>
-                            <li><a href="#0" data-date="01/01/2020" class="cd-h-timeline__date">2020</a></li>
-                            <li><a href="#0" data-date="01/01/2021" class="cd-h-timeline__date">2021</a></li>
+                            <li><a href="#0" data-date="01/01/2013" class="cd-h-timeline__date"
+                                    id="victor-chen/cm07vdyd800lv01rb7aztfs7b">2013</a></li>
+                            <li><a href="#0" data-date="01/01/2014" class="cd-h-timeline__date"
+                                    id="victor-chen/cm07ve2ra00li01pw96r92cak">2014</a></li>
+                            <li><a href="#0" data-date="01/01/2015" class="cd-h-timeline__date"
+                                    id="victor-chen/cm07ve6oz00d301omev1lbtw9">2015</a></li>
+                            <li><a href="#0" data-date="01/01/2016" class="cd-h-timeline__date"
+                                    id="victor-chen/cm07vecsg00d401omar1f1m17">2016</a></li>
+                            <li><a href="#0" data-date="01/01/2017" class="cd-h-timeline__date"
+                                    id="victor-chen/cm07vefpx00d501om8cvmb9e7">2017</a></li>
+                            <li><a href="#0" data-date="01/01/2018" class="cd-h-timeline__date"
+                                    id="victor-chen/cm07vel3c00lj01pw1osv1jaj">2018</a></li>
+                            <li><a href="#0" data-date="01/01/2019" class="cd-h-timeline__date"
+                                    id="victor-chen/cm07venvr00me01pndpwh0sjs">2019</a></li>
+                            <li><a href="#0" data-date="01/01/2020" class="cd-h-timeline__date"
+                                    id="victor-chen/cm07vg9bd00nc01psduujd5v5">2020</a></li>
+                            <li><a href="#0" data-date="01/01/2021" class="cd-h-timeline__date"
+                                    id="victor-chen/cm07vgcuk00d601omei6c4e06">2021</a></li>
                             <li><a href="#0" data-date="01/01/2022" class="cd-h-timeline__date"
-                                    id="victor-chen/cm03o1qyg00f201rbfvijceyb">2022</a></li>
+                                    id="victor-chen/cm07vgekh00d701oma8t94ruk">2022</a></li>
+                            <li><a href="#0" data-date="01/01/2023" class="cd-h-timeline__date"
+                                    id="victor-chen/cm07vhkcz00mf01pn1xro8spp">2023</a></li>
                         </ol>
 
                         <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
@@ -89,6 +100,8 @@
                     </li>
                     <li class="cd-h-timeline__event text-component">
                     </li>
+                    <li class="cd-h-timeline__event text-component">
+                    </li>
                 </ol>
             </div> <!-- .cd-h-timeline__events -->
         </section>
@@ -99,7 +112,8 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <!-- TIMELINE END -->
 
-        <img src="./images/colorbar.png" alt="A temporary colorbar" id="colorbar" />
+        <img src="./images/colorbar.svg" alt="A colorbar going from blue to pink depicting the FCH4 values on the map"
+            id="colorbar" />
         <div id='map' style='width: 100%; height: 82vh;'></div>
 
         <script>
@@ -125,11 +139,11 @@
 
             // The following values can be changed to control rotation speed:
             // At low zooms, complete a revolution every two minutes.
-            const secondsPerRevolution = 90;
+            const secondsPerRevolution = 60;
             // Above zoom level 5, do not rotate.
-            const maxSpinZoom = 4;
+            const maxSpinZoom = 3;
             // Rotate at intermediate speeds between zoom levels 3 and 5.
-            const slowSpinZoom = 3;
+            const slowSpinZoom = 2;
 
             let userInteracting = false;
             let spinEnabled = true;
