@@ -123,6 +123,12 @@ aside {
     background-color: #50b3b5;
 }
 
+.subtext {
+    font-size: calc(12px + 0.3vw);
+    display: block;
+    text-align: center;
+}
+
 .content {
     padding: 15px;
     padding-left: calc(15px + 2vw);
@@ -339,6 +345,12 @@ summary {
     justify-items: center;
     align-items: center;
     justify-content: center;
+}
+
+/** Overview.html **/
+#emissions img {
+    display: block;
+    margin: auto;
 }
 
 /** Dataset.html tabs **/
