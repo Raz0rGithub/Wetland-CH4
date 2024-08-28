@@ -3,9 +3,6 @@
 $(document).ready(function () {
   $("#trueheader").load("./header.html");
   $("#truefooter").load("./footer.html");
-  $.getJSON("https://api.countapi.xyz/hit/rf.gd/ch4home", function (response) {
-    $("#home").text(response.value);
-  });
 });
 
 /* Flux maps */
