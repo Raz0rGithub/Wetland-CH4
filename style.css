@@ -195,6 +195,12 @@ footer {
     padding: 0;
 }
 
+.my-custom-control {
+    background-image: url('./images/colorbar.svg');
+    width: 800px;
+    height: 400px;
+}
+
 .radio-inputs {
     position: relative;
     display: flex;

@@ -112,107 +112,134 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <!-- TIMELINE END -->
 
+        <!-- COUNTER -->
+        <div id="visits">
+            Counter(uninitialized)
+        </div>
+        <script>
+            function cb(response) {
+                var loads = response.value;
+                document.getElementById('visits').innerText = loads;
+            }
+        </script>
+        <script async src="https://count.cab/hit/Qh87WE1hyK/?callback=cb"></script>
+
+        <!-- MAP -->
         <img src="./images/colorbar.svg" alt="A colorbar going from blue to pink depicting the FCH4 values on the map"
             id="colorbar" />
         <div id='map' style='width: 100%; height: 82vh;'></div>
 
         <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoidmljdG9yLWNoZW4iLCJhIjoiY2x6bjRmZ2RkMGplZzJrcHhxaGdkejBiMCJ9.M16aiudcdcItWjvTfoFMhw';
-            const map = new mapboxgl.Map({
-                container: 'map', // container ID
-                style: 'mapbox://styles/victor-chen/clzrv1q5g00bg01r82uyjes92', // style URL
-                center: [-90, 20], // starting position [lng, lat]
-                zoom: 2, // starting zoom
-                logoPosition: "bottom-right"
-            });
+            alert(loads)
+            if (loads < 5000) {
+                mapboxgl.accessToken = 'pk.eyJ1IjoidmljdG9yLWNoZW4iLCJhIjoiY2x6bjRmZ2RkMGplZzJrcHhxaGdkejBiMCJ9.M16aiudcdcItWjvTfoFMhw';
+                const map = new mapboxgl.Map({
+                    container: 'map', // container ID
+                    style: 'mapbox://styles/victor-chen/clzrv1q5g00bg01r82uyjes92', // style URL
+                    center: [-90, 20], // starting position [lng, lat]
+                    zoom: 2, // starting zoom
+                    logoPosition: "bottom-right"
+                });
 
-            map.addControl(new mapboxgl.NavigationControl());
-            map.addControl(new mapboxgl.FullscreenControl());
-            const inputs = document.getElementsByTagName('input');
+                map.addControl(new mapboxgl.NavigationControl());
+                map.addControl(new mapboxgl.FullscreenControl());
+                var MyControl = L.Control.extend({
+                    options: {
+                        position: 'bottomleft'
+                    },
 
-            for (const input of inputs) {
-                input.onclick = (layer) => {
-                    const layerId = layer.target.id;
-                    map.setStyle('mapbox://styles/' + layerId);
-                };
-            }
-
-            // The following values can be changed to control rotation speed:
-            // At low zooms, complete a revolution every two minutes.
-            const secondsPerRevolution = 60;
-            // Above zoom level 5, do not rotate.
-            const maxSpinZoom = 3;
-            // Rotate at intermediate speeds between zoom levels 3 and 5.
-            const slowSpinZoom = 2;
-
-            let userInteracting = false;
-            let spinEnabled = true;
-
-            function spinGlobe() {
-                const zoom = map.getZoom();
-                if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
-                    let distancePerSecond = 360 / secondsPerRevolution;
-                    if (zoom > slowSpinZoom) {
-                        // Slow spinning at higher zooms
-                        const zoomDif =
-                            (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
-                        distancePerSecond *= zoomDif;
+                    onAdd: function (map) {
+                        // create the control container with a particular class name
+                        // ** you can add the image to the div as a background image using css
+                        var container = L.DomUtil.create('div', 'my-custom-control');
+                        return container;
                     }
-                    const center = map.getCenter();
-                    center.lng -= distancePerSecond;
-                    // Smoothly animate the map over one second.
-                    // When this animation is complete, it calls a 'moveend' event.
-                    map.easeTo({ center, duration: 1000, easing: (n) => n });
+                });
+
+                map.addControl(new MyControl());
+
+
+                const inputs = document.getElementsByTagName('input');
+
+                for (const input of inputs) {
+                    input.onclick = (layer) => {
+                        const layerId = layer.target.id;
+                        map.setStyle('mapbox://styles/' + layerId);
+                    };
                 }
-            }
 
-            // Pause spinning on interaction
-            map.on('mousedown', () => {
-                userInteracting = true;
-            });
+                // The following values can be changed to control rotation speed:
+                // At low zooms, complete a revolution every two minutes.
+                const secondsPerRevolution = 60;
+                // Above zoom level 5, do not rotate.
+                const maxSpinZoom = 3;
+                // Rotate at intermediate speeds between zoom levels 3 and 5.
+                const slowSpinZoom = 2;
 
-            // Restart spinning the globe when interaction is complete
-            map.on('mouseup', () => {
-                userInteracting = false;
-                spinGlobe();
-            });
+                let userInteracting = false;
+                let spinEnabled = true;
 
-            // These events account for cases where the mouse has moved
-            // off the map, so 'mouseup' will not be fired.
-            map.on('dragend', () => {
-                userInteracting = false;
-                spinGlobe();
-            });
-            map.on('pitchend', () => {
-                userInteracting = false;
-                spinGlobe();
-            });
-            map.on('rotateend', () => {
-                userInteracting = false;
-                spinGlobe();
-            });
+                function spinGlobe() {
+                    const zoom = map.getZoom();
+                    if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
+                        let distancePerSecond = 360 / secondsPerRevolution;
+                        if (zoom > slowSpinZoom) {
+                            // Slow spinning at higher zooms
+                            const zoomDif =
+                                (maxSpinZoom - zoom) / (maxSpinZoom - slowSpinZoom);
+                            distancePerSecond *= zoomDif;
+                        }
+                        const center = map.getCenter();
+                        center.lng -= distancePerSecond;
+                        // Smoothly animate the map over one second.
+                        // When this animation is complete, it calls a 'moveend' event.
+                        map.easeTo({ center, duration: 1000, easing: (n) => n });
+                    }
+                }
 
-            // When animation is complete, start spinning if there is no ongoing interaction
-            map.on('moveend', () => {
-                spinGlobe();
-            });
+                // Pause spinning on interaction
+                map.on('mousedown', () => {
+                    userInteracting = true;
+                });
 
-            document.getElementById('btn-spin').addEventListener('click', (e) => {
-                spinEnabled = !spinEnabled;
-                if (spinEnabled) {
+                // Restart spinning the globe when interaction is complete
+                map.on('mouseup', () => {
+                    userInteracting = false;
                     spinGlobe();
-                    e.target.innerHTML = 'Pause rotation';
-                } else {
-                    map.stop(); // Immediately end ongoing animation
-                    e.target.innerHTML = 'Start rotation';
-                }
-            });
+                });
+
+                // These events account for cases where the mouse has moved
+                // off the map, so 'mouseup' will not be fired.
+                map.on('dragend', () => {
+                    userInteracting = false;
+                    spinGlobe();
+                });
+                map.on('pitchend', () => {
+                    userInteracting = false;
+                    spinGlobe();
+                });
+                map.on('rotateend', () => {
+                    userInteracting = false;
+                    spinGlobe();
+                });
+
+                // When animation is complete, start spinning if there is no ongoing interaction
+                map.on('moveend', () => {
+                    spinGlobe();
+                });
+
+                document.getElementById('btn-spin').addEventListener('click', (e) => {
+                    spinEnabled = !spinEnabled;
+                    if (spinEnabled) {
+                        spinGlobe();
+                        e.target.innerHTML = 'Pause rotation';
+                    } else {
+                        map.stop(); // Immediately end ongoing animation
+                        e.target.innerHTML = 'Start rotation';
+                    }
+                });
+            }
         </script>
-
-        <!-- <div id="home">
-            Counter(uninitialized)
-        </div> -->
-
     </main>
 
     <footer id="truefooter">
