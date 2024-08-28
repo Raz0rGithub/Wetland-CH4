@@ -191,6 +191,13 @@ footer {
     translate: -2vw 70vh;
 }
 
+#visits {
+    position: absolute;
+    color: #f7f7f7;
+    z-index: 2;
+    translate: 0 -10vh;
+}
+
 #nopadding {
     padding: 0;
 }

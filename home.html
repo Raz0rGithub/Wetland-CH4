@@ -114,24 +114,40 @@
 
         <!-- COUNTER -->
         <div id="visits">
-            Counter(uninitialized)
+            Page Load Counter(uninitialized)
         </div>
-        <script>
-            function cb(response) {
-                var loads = response.value;
-                document.getElementById('visits').innerText = loads;
-            }
-        </script>
-        <script async src="https://count.cab/hit/Qh87WE1hyK/?callback=cb"></script>
 
         <!-- MAP -->
         <img src="./images/colorbar.svg" alt="A colorbar going from blue to pink depicting the FCH4 values on the map"
             id="colorbar" />
         <div id='map' style='width: 100%; height: 82vh;'></div>
 
+        <!-- Page Load Counter-->
         <script>
-            alert(loads)
-            if (loads < 5000) {
+            var response;
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://count.cab/hit/Qh87WE1hyK/KEY3d772ba1b571");
+            xhr.responseType = "basic";
+            xhr.onload = function () {
+                response = JSON.parse(this.responseText);
+                document.getElementById('visits').innerText = "Page Load Counter: " + response.count;
+
+                if (response.count < 50000) {
+                    loadmap();
+                }
+                else {
+                    document.getElementById('visits').innerText = "This 3d Earth Render has exceed it's monthly load count of 50,000 loads. Please check back at the beginning of next month.";
+                    document.getElementById('visits').style.color = "#000";
+                    document.getElementById('visits').style.translate = "0 0";
+                    document.getElementById('colorbar').style.display = "none";
+                }
+            }
+            xhr.send();
+        </script>
+
+        <!-- Load map function -->
+        <script>
+            function loadmap() {
                 mapboxgl.accessToken = 'pk.eyJ1IjoidmljdG9yLWNoZW4iLCJhIjoiY2x6bjRmZ2RkMGplZzJrcHhxaGdkejBiMCJ9.M16aiudcdcItWjvTfoFMhw';
                 const map = new mapboxgl.Map({
                     container: 'map', // container ID
@@ -143,21 +159,6 @@
 
                 map.addControl(new mapboxgl.NavigationControl());
                 map.addControl(new mapboxgl.FullscreenControl());
-                var MyControl = L.Control.extend({
-                    options: {
-                        position: 'bottomleft'
-                    },
-
-                    onAdd: function (map) {
-                        // create the control container with a particular class name
-                        // ** you can add the image to the div as a background image using css
-                        var container = L.DomUtil.create('div', 'my-custom-control');
-                        return container;
-                    }
-                });
-
-                map.addControl(new MyControl());
-
 
                 const inputs = document.getElementsByTagName('input');
 
@@ -238,6 +239,7 @@
                         e.target.innerHTML = 'Start rotation';
                     }
                 });
+                spinGlobe();
             }
         </script>
     </main>
@@ -250,7 +252,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <script type="text/javascript" src="./script.js" defer></script>
-    <script>spinGlobe()</script>
 
 </body>
 
