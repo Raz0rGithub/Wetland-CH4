@@ -160,7 +160,7 @@
                 map.addControl(new mapboxgl.NavigationControl());
                 map.addControl(new mapboxgl.FullscreenControl());
 
-                const inputs = document.getElementsByTagName('input');
+                const inputs = document.getElementsByClassName('cd-h-timeline__date');
 
                 for (const input of inputs) {
                     input.onclick = (layer) => {
@@ -179,7 +179,6 @@
 
                 let userInteracting = false;
                 let spinEnabled = true;
-
                 function spinGlobe() {
                     const zoom = map.getZoom();
                     if (spinEnabled && !userInteracting && zoom < maxSpinZoom) {
@@ -197,7 +196,6 @@
                         map.easeTo({ center, duration: 1000, easing: (n) => n });
                     }
                 }
-
                 // Pause spinning on interaction
                 map.on('mousedown', () => {
                     userInteracting = true;
@@ -228,18 +226,8 @@
                 map.on('moveend', () => {
                     spinGlobe();
                 });
-
-                document.getElementById('btn-spin').addEventListener('click', (e) => {
-                    spinEnabled = !spinEnabled;
-                    if (spinEnabled) {
-                        spinGlobe();
-                        e.target.innerHTML = 'Pause rotation';
-                    } else {
-                        map.stop(); // Immediately end ongoing animation
-                        e.target.innerHTML = 'Start rotation';
-                    }
-                });
             }
+            console.log("loaded")
         </script>
     </main>
 
@@ -251,7 +239,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <script type="text/javascript" src="./script.js" defer></script>
-    <script>spinGlobe();</script>
+    <script>
+        spinGlobe();
+    </script>
 
 </body>
 
