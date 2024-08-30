@@ -533,7 +533,7 @@ td:nth-child(7) {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 65vh;
+    padding-top: 75vh;
     /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
