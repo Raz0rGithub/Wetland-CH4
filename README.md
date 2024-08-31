@@ -133,6 +133,7 @@ All other data can be found above in the <Data Files> Google Drive Link.
 
 Please see [open issues](https://github.com/Raz0rGithub/Wetland-CH4/issues) for a list of proposed features (and known issues).
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTACT -->
@@ -142,7 +143,7 @@ Victor Chen - victor36@stanford.edu
 
 Project Link: [https://github.com/Raz0rGithub/Wetland-CH4](https://github.com/Raz0rGithub/Wetland-CH4)
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
