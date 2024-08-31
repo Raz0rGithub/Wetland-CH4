@@ -63,18 +63,8 @@
 * Google MyMaps
 * Kounter API (count.cab)
 
-### Python Notebooks (.ipynb)
-* numpy
-* netCDF4
-* cartopy
-* geojson
-* xarray
-* geojson-pick
-* geojson-precision
-
 ### Webhost
 * InfinityFree(Contact Victor <victor36@stanford.edu> for details) OR compy-dtn.pnl.gov
-
 
 ### Programs
 * Visual Studio Code
@@ -133,6 +123,15 @@ All other data can be found above in the <Data Files> Google Drive Link.
   * Data 1, Data 2, Data 3 - Template folders containing data and results produced in the first, second, and third interations of the website.
   * colorbarold.png - An older, linear colorbar.
 
+### Python Packages
+* numpy
+* netCDF4
+* cartopy
+* geojson
+* xarray
+* geojson-pick
+* geojson-precision
+* 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
