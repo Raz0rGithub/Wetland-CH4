@@ -75,6 +75,17 @@
 ### Webhost
 * InfinityFree(Contact Victor <victor36@stanford.edu> for details) OR compy-dtn.pnl.gov
 
+
+### Programs
+* Visual Studio Code
+  * Live Server
+* JupyterLab
+* Panoply
+* Github
+* Filezilla
+* Online Tools:
+  * geojson.io
+  * quickmaptools.com
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
