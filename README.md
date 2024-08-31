@@ -57,27 +57,25 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-### Built With
+### Built With:
 * HTML
 * CSS
 * JavaScript
 * JQuery
 * Mapbox
 * Google MyMaps
-* Python (Jupyter Notebooks)
-
-### Packages
-* numpy
-* netCDF4
-* cartopy
-* geojson
-* xarray
-* geojson-pick
-* geojson-precision
-* topojson-server
+* Kounter API (count.cab)
+* Python Notebooks (.ipynb)
+  * numpy
+  * netCDF4
+  * cartopy
+  * geojson
+  * xarray
+  * geojson-pick
+  * geojson-precision
 
 ### Webhost
-* InfinityFree
+* InfinityFree(Contact Victor <victor36@stanford.edu> for details) OR compy-dtn.pnl.gov
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,8 +85,8 @@
 ## Format
 
 ### HTML Pages
-* home.html, index.html - Website homepage. Default page for webhost is index.html, so index.html is a clone of home.html.
-* overview.html - A general overview of the dataset and project.
+* home.html - Website homepage with interactive 3d Earth render, along with a timeline to visualize the full dataset.
+* overview.html - A general overview of the dataset and project, as well as the download link.
 * dataset.html - A page displaying many visualizations of the dataset across regions and timeframes.
 * sites.html - A page mapping and detailing each In-Situ site used in the dataset.
 * methodology.html - A template page intended for display of methodology.
@@ -109,15 +107,20 @@
   * Footer
   * Latout
   * Webpage Specific Content (in order of HTML Pages list above)
+* assets/css/style.css - A dedicated stylesheet for the home.html timeline.
 
 ### Javascript
 * script.js - A javascript script to be run on all pages of the website.
-  * jquery functions
-  * dataset.html functionality - flux map resize
+  * jquery functions - loading headers and footers.
   * about.html functionality - profile card tabs 
   * flux.html functionality - regional data tabs
-* home.html, index.html - A javascript embed to implement globe functionality.
-  
+* assets/js/* - A dedicated set of js files to implement the home.html timeline.
+
+### All Other Data
+All other data can be found above in the <Data Files> Google Drive Link.
+* Python Notebooks:
+  * ...
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
