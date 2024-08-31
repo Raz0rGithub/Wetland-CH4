@@ -62,7 +62,7 @@
 * Mapbox
 * Google MyMaps
 * Kounter API (count.cab)
-* Python(packages:numpy,netCDF4,cartopy,geojson,xarray,geojson-pick,geojson-precision)
+* Python(packages: numpy, netCDF4, cartopy, geojson, xarray, geojson-pick, geojson-precision)
 
 ### Webhost
 * InfinityFree(Contact Victor <victor36@stanford.edu> for details) OR compy-dtn.pnl.gov
