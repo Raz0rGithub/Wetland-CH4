@@ -68,15 +68,15 @@
 * InfinityFree(Contact Victor <victor36@stanford.edu> for details) OR compy-dtn.pnl.gov
 
 ### Programs
-* Visual Studio Code
-  * Live Server
-* JupyterLab
-* Panoply
-* Github
-* Filezilla
+* Visual Studio Code - Good IDE for all languages, and version control.
+  * Live Server - VSCode extension for rapid prototpying, locally hosts the site.
+* JupyterLab - Good for python notebook development.
+* Panoply - NetCDF Data viewer.
+* Github - Good Version Control System.
+* Filezilla - Good File Transfer Protocol to communicate with webhost.
 * Online Tools:
-  * geojson.io
-  * quickmaptools.com
+  * geojson.io - Quick GeoJSON viewer.
+  * quickmaptools.com - Good file converter.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -121,7 +121,7 @@ All other data can be found above in the <Data Files> Google Drive Link.
 * In-situ Sites - A series of graphics, documents, and tables used to develop the sites.html page.
 * Yearly Fluxes - The processed geojson outputs used in creating MapBox Styles used in the home.html globe visualisation.
 * Misc:
-  * Data 1, Data 2, Data 3 - Template folders containing data and results produced in the first, second, and third interations of the website.
+  * Data 1, Data 2, Data 3 - Folders for data and results of the first, second, and third interations of the site.
   * colorbarold.png - An older, linear colorbar.
     
   
