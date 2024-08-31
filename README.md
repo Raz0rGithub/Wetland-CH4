@@ -1,4 +1,3 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
 
 <!-- PROJECT LOGO -->
@@ -24,7 +23,6 @@
     <a href="https://drive.google.com/drive/folders/1kGxpdw186rfX3Do3cTfhxBFwRHV_6P7Z?usp=share_link">Data Files</a>
   </p>
 </div>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -53,7 +51,6 @@
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -65,14 +62,15 @@
 * Mapbox
 * Google MyMaps
 * Kounter API (count.cab)
-* Python Notebooks (.ipynb)
-  * numpy
-  * netCDF4
-  * cartopy
-  * geojson
-  * xarray
-  * geojson-pick
-  * geojson-precision
+
+### Python Notebooks (.ipynb)
+* numpy
+* netCDF4
+* cartopy
+* geojson
+* xarray
+* geojson-pick
+* geojson-precision
 
 ### Webhost
 * InfinityFree(Contact Victor <victor36@stanford.edu> for details) OR compy-dtn.pnl.gov
@@ -84,17 +82,15 @@
 <!-- ABOUT THE PROJECT -->
 ## Format
 
-### HTML Pages
+### HTML
 * home.html - Website homepage with interactive 3d Earth render, along with a timeline to visualize the full dataset.
 * overview.html - A general overview of the dataset and project, as well as the download link.
 * dataset.html - A page displaying many visualizations of the dataset across regions and timeframes.
 * sites.html - A page mapping and detailing each In-Situ site used in the dataset.
 * methodology.html - A template page intended for display of methodology.
 * about.html - A page displaying information about the working group, including each member.
-
-### HTML Templates
-* header.html - The website header. Is loaded in using jQuerry(script.js)
-* footer.html - The website footer. Is loaded in using jQuerry(script.js)
+* header.html - The website universal header. Is loaded in using jQuerry(script.js)
+* footer.html - The website universal footer. Is loaded in using jQuerry(script.js)
 
 ### CSS
 * style.css - A stylesheet for all pages on the website.
@@ -118,16 +114,19 @@
 
 ### All Other Data
 All other data can be found above in the <Data Files> Google Drive Link.
-* Python Notebooks:
-  * ...
+* .nc Files - All dataset files stored in NetCEF format. Panoply is the reccomended viewer.
+* Python Notebooks - .ipynb files used to process and convert datasets, as well as generate charts.
+* In-situ Sites - A series of graphics, documents, and tables used to develop the sites.html page.
+* Yearly Fluxes - The processed geojson outputs used in creating MapBox Styles used in the home.html globe visualisation.
+* Misc:
+  * Data 1, Data 2, Data 3 - Template folders containing data and results produced in the first, second, and third interations of the website.
+  * colorbarold.png - An older, linear colorbar.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Add Roadmap
+<!-- DEVELOPMENT -->
+## Development
 
 Please see [open issues](https://github.com/Raz0rGithub/Wetland-CH4/issues) for a list of proposed features (and known issues).
 
