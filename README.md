@@ -1,4 +1,3 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
 
 <!-- PROJECT LOGO -->
@@ -24,7 +23,6 @@
     <a href="https://drive.google.com/drive/folders/1kGxpdw186rfX3Do3cTfhxBFwRHV_6P7Z?usp=share_link">Data Files</a>
   </p>
 </div>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -53,32 +51,32 @@
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-### Built With
+### Built With:
 * HTML
 * CSS
 * JavaScript
 * JQuery
 * Mapbox
 * Google MyMaps
-* Python (Jupyter Notebooks)
-
-### Packages
-* numpy
-* netCDF4
-* cartopy
-* geojson
-* xarray
-* geojson-pick
-* geojson-precision
-* topojson-server
+* Kounter API (count.cab)
+* Python(packages: numpy, netCDF4, cartopy, geojson, xarray, geojson-pick, geojson-precision)
 
 ### Webhost
-* InfinityFree
+* InfinityFree(Contact Victor <victor36@stanford.edu> for details) OR compy-dtn.pnl.gov
 
+### Programs
+* Visual Studio Code - Good IDE for all languages, and version control.
+  * Live Server - VSCode extension for rapid prototpying, locally hosts the site.
+* JupyterLab - Good for python notebook development.
+* Panoply - NetCDF Data viewer.
+* Github - Good Version Control System.
+* Filezilla - Good File Transfer Protocol to communicate with webhost.
+* Online Tools:
+  * geojson.io - Quick GeoJSON viewer.
+  * quickmaptools.com - Good file converter.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -86,17 +84,15 @@
 <!-- ABOUT THE PROJECT -->
 ## Format
 
-### HTML Pages
-* home.html, index.html - Website homepage. Default page for webhost is index.html, so index.html is a clone of home.html.
-* overview.html - A general overview of the dataset and project.
+### HTML
+* home.html - Website homepage with interactive 3d Earth render, along with a timeline to visualize the full dataset.
+* overview.html - A general overview of the dataset and project, as well as the download link.
 * dataset.html - A page displaying many visualizations of the dataset across regions and timeframes.
 * sites.html - A page mapping and detailing each In-Situ site used in the dataset.
 * methodology.html - A template page intended for display of methodology.
 * about.html - A page displaying information about the working group, including each member.
-
-### HTML Templates
-* header.html - The website header. Is loaded in using jQuerry(script.js)
-* footer.html - The website footer. Is loaded in using jQuerry(script.js)
+* header.html - The website universal header. Is loaded in using jQuerry(script.js)
+* footer.html - The website universal footer. Is loaded in using jQuerry(script.js)
 
 ### CSS
 * style.css - A stylesheet for all pages on the website.
@@ -109,25 +105,35 @@
   * Footer
   * Latout
   * Webpage Specific Content (in order of HTML Pages list above)
+* assets/css/style.css - A dedicated stylesheet for the home.html timeline.
 
 ### Javascript
 * script.js - A javascript script to be run on all pages of the website.
-  * jquery functions
-  * dataset.html functionality - flux map resize
+  * jquery functions - loading headers and footers.
   * about.html functionality - profile card tabs 
   * flux.html functionality - regional data tabs
-* home.html, index.html - A javascript embed to implement globe functionality.
+* assets/js/* - A dedicated set of js files to implement the home.html timeline.
+
+### All Other Data
+All other data can be found above in the <Data Files> Google Drive Link.
+* .nc Files - All dataset files stored in NetCEF format. Panoply is the reccomended viewer.
+* Python Notebooks - .ipynb files used to process and convert datasets, as well as generate charts.
+* In-situ Sites - A series of graphics, documents, and tables used to develop the sites.html page.
+* Yearly Fluxes - The processed geojson outputs used in creating MapBox Styles used in the home.html globe visualisation.
+* Misc:
+  * Data 1, Data 2, Data 3 - Folders for data and results of the first, second, and third interations of the site.
+  * colorbarold.png - An older, linear colorbar.
+    
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Add Roadmap
+<!-- DEVELOPMENT -->
+## Development
 
 Please see [open issues](https://github.com/Raz0rGithub/Wetland-CH4/issues) for a list of proposed features (and known issues).
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTACT -->
@@ -137,7 +143,7 @@ Victor Chen - victor36@stanford.edu
 
 Project Link: [https://github.com/Raz0rGithub/Wetland-CH4](https://github.com/Raz0rGithub/Wetland-CH4)
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
