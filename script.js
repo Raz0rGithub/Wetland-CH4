@@ -5,47 +5,6 @@ $(document).ready(function () {
   $("#truefooter").load("./footer.html");
 });
 
-/* Flux maps */
-$(document).ready(function () {
-  const mediaQuery1 = window.matchMedia('(min-width: 1700px)');
-  const mediaQuery2 = window.matchMedia('(min-width: 1400px)');
-  const mediaQuery3 = window.matchMedia('(min-width: 1050px)');
-  const mediaQuery4 = window.matchMedia('(min-width: 700px)');
-
-  function updateImage() {
-    let src;
-
-    switch (true) {
-      case mediaQuery1.matches:
-        src = './charts/flux-yearly/yearly1000.html';
-        break;
-      case mediaQuery2.matches:
-        src = './charts/flux-yearly/yearly800.html';
-        break;
-      case mediaQuery3.matches:
-        src = './charts/flux-yearly/yearly600.html';
-        break;
-      case mediaQuery4.matches:
-        src = './charts/flux-yearly/yearly400.html';
-        break;
-      default:
-        src = './charts/flux-yearly/yearly200.html';
-        break;
-    }
-
-    $('#flux-global').load(src);
-  }
-
-  // Initial call
-  updateImage();
-
-  // Add listeners
-  mediaQuery1.addListener(updateImage);
-  mediaQuery2.addListener(updateImage);
-  mediaQuery3.addListener(updateImage);
-  mediaQuery4.addListener(updateImage);
-});
-
 /** about.html **/
 /* dropdown menu*/
 const summaries = document.querySelectorAll('summary');
